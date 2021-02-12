@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const App = props => {
   const [state, setState] = useState(props);
@@ -6,6 +6,14 @@ const App = props => {
   const reset = () => {
     setState(props);
   }
+
+  useEffect(() => {
+    console.log("useEffect is invoked every time")
+  })
+
+  useEffect(() => {
+    console.log("useEffect is invoked.")
+  },[])
 
   return (
     <>
